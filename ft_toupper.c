@@ -6,24 +6,20 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:07:38 by acazizi           #+#    #+#             */
-/*   Updated: 2023/11/03 21:18:28 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/11/10 23:03:11 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if(c >= 'a' && c <='z')
-        return(c - 32);
-    return(c);
+	if(c >= 'a' && c <='z')
+		return(c - 32);
+	return(c);
 }
 
-int main()
-{
-
-
-    printf("===> %c", ft_toupper('a'));
-    
-}
+//  int	main(void)
+// {
+//  	printf("%c", ft_toupper('H'));
+// }

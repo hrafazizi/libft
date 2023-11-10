@@ -6,21 +6,21 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/11/03 21:05:43 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/11/07 22:43:04 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t ft_strlen(const char *s)
 {
     size_t  L;
     L = 0;
-    while (s[L])
+    while (s[L] != '\0')
             L++;
         return(L);
 }
-int main()
-{
-	printf("%zu", ft_strlen("555"));
-}
+// int main()
+// {
+// 	printf("%zu", ft_strlen("555"));
+// }
