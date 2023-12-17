@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 20:22:33 by acazizi           #+#    #+#             */
-/*   Updated: 2023/11/10 22:00:14 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/02 22:36:06 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  return (0);
  }
  
-// int main (void)
+// int main()
 // {
- //printf("%d", ft_isprint('k'));
+// 	printf("%d", ft_isprint(12));
 // }

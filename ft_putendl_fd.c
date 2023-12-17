@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/16 16:54:33 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/16 17:22:28 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <unistd.h>
 
-size_t ft_strlen(const char *s)
+void ft_putendl_fd(char *s, int fd)
 {
-    size_t  i;
-
+    int i;
     i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-// int main ()
-// {
     
-//     printf("%zu", ft_strlen("hraf"));
-// }
+    while (s[i] != '\0')
+    {
+        write(fd, &s[i], 1);
+        i++;
+    }
+    write(fd, "\n", 1);
+}
+
+#include <fcntl.h>
+
+int main() 
+{
+
+    ft_putendl_fd("hraf madrid", 2);
+    return 0;
+}

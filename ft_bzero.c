@@ -1,28 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/05 20:11:39 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/07 22:23:54 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-size_t ft_strlen(const char *s)
+void ft_bzero(void *s, size_t n)
 {
-    size_t  i;
-
+    size_t i;
     i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-// int main ()
-// {
+    char *str = (char *)s;
+    if( n == 0 )
+        return;
     
-//     printf("%zu", ft_strlen("hraf"));
+    while (i < n)
+    {
+        str[i] = 0;
+        i++;
+    }
+}
+
+// int main(void)
+// {
+//     int a = 32111515;
+
+//     ft_bzero(&a, 3);
+
+//     //16777216
+    
+//     printf("%d\n", a);
+
+
+//     int b = 5;
+
+
+//     char g = (char)b;
+
+
+//     float f = (float)g;
 // }

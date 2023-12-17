@@ -1,28 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/11 16:40:16 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/11 17:58:33 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
-size_t ft_strlen(const char *s)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-    size_t  i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-// int main ()
-// {
+    int i ;
+    i = 0 ;
+    char *r = (char *)s;
     
-//     printf("%zu", ft_strlen("hraf"));
-// }
+    while(i < n)
+    {
+        if (r[i] == c)
+        {
+            return (&r[i]);
+        }
+        i++;
+    }
+
+    return (NULL);
+}
+int main ()
+{
+ char *r = "madrid";
+ int c = 99;
+ size_t n = 8;
+ void *t = ft_memchr(r, c, n);
+ printf("%s", t);
+}
+
+
+
+

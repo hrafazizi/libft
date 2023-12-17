@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/08 19:59:54 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/08 23:38:50 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
-size_t ft_strlen(const char *s)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    size_t  i;
-
+    size_t i;
     i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-// int main ()
-// {
     
-//     printf("%zu", ft_strlen("hraf"));
-// }
+    while( s1[i] != '\0' && s2[i] !='\0' && i < n )
+    {
+        if( s1[i] != s2[i]) 
+        {
+            if (s1[i] - s2[i] < 0)
+                return -1;
+            return 1;
+        }
+        i++;
+    }
+    return(0);
+}
+
+int main()
+{    
+ int y;
+ y = ft_strncmp("abbb", "abbz", 4);
+    printf("%d", y);
+}

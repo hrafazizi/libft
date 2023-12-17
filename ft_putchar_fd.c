@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/16 17:05:23 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/16 17:38:50 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-size_t ft_strlen(const char *s)
+void ft_putchar_fd(char c, int fd)
 {
-    size_t  i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
+    write(fd, &c, 1);
 }
-// int main ()
-// {
+
+int main ()
+{
+    char c;
+    c = 't';
     
-//     printf("%zu", ft_strlen("hraf"));
-// }
+    ft_putchar_fd(c, 1);
+}

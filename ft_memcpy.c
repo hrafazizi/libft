@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/09 01:29:48 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/09 21:17:02 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t ft_strlen(const char *s)
+#include <string.h>
+#include<stdio.h>
+void *ft_memcpy(void * dst, const void * src, size_t n)
 {
-    size_t  i;
-
+    size_t i;
     i = 0;
-    while (s[i] != '\0')
+    unsigned char *d;
+    unsigned char *s;
+
+    d = (unsigned char *)dst;
+    s = (unsigned char *)src;
+    while ( i < n)
+    {
+        d[i] = s[i];
         i++;
-    return(i);
+    }
+    return(dst);
 }
-// int main ()
-// {
-    
-//     printf("%zu", ft_strlen("hraf"));
-// }
+int main()
+{
+char dst[] = "hraf";
+char scr[] = "real";
+size_t nbr = 4;
+char *r;
+r = ft_memcpy(dst, scr, 4);
+printf("%s", r);
+}

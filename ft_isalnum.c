@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 21:27:16 by acazizi           #+#    #+#             */
-/*   Updated: 2023/11/07 22:26:32 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/02 22:29:30 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,11 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+
+// int main(void)
+// {
+// 	printf("%d\n", ft_isalnum('5'));
+// 	printf("%d\n", ft_isalnum('H'));
+// 	printf("%d\n", ft_isalnum('.'));
+// 	return (0);
+// }

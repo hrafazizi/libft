@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:09:30 by acazizi           #+#    #+#             */
-/*   Updated: 2023/11/07 22:26:43 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/02 22:31:59 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,8 @@ int ft_isascii(int c)
         return(1);
     return(0);
 }
+
+// int main (void)
+// {
+//     printf("%d", ft_isascii('y'));
+// }

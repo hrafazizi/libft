@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:28:37 by acazizi           #+#    #+#             */
-/*   Updated: 2023/11/07 22:27:01 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/03 22:08:44 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 int ft_tolower(int c)
 {
     if(c >= 'A' && c <= 'Z')
-        return( c +32);
-        return(c);
+        return( c + 32);
+    return(c);
 }
-// int main()
+
+// int main (void)
 // {
-//     printf("%c", ft_tolower('E'));
+//     int z;
+//     z = ft_tolower('R');
+//     printf("%c\n", z);
 // }

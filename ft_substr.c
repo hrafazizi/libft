@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.C                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/16 21:13:30 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/17 01:35:09 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 size_t ft_strlen(const char *s)
 {
@@ -21,8 +22,37 @@ size_t ft_strlen(const char *s)
         i++;
     return(i);
 }
-// int main ()
-// {
+
+
+char *ft_substr(char const *s, unsigned int start, size_t len)
+{
+    char *r;
+    int i ;
+    size_t l;
     
-//     printf("%zu", ft_strlen("hraf"));
-// }
+    i = 0;
+    l = ft_strlen(s);
+    if (l - start < len)
+    {
+        len = l - start;
+    }
+   
+    r = (char *)malloc(len + 1);
+    if (r == NULL)
+        return NULL;
+    while (i < len)
+    {
+        r[i] = s[start];
+        start++;
+        i++;
+    }
+    r[i] = 0;
+    return(r);
+}
+
+int main ()
+{
+    
+    printf("%s\n", ft_substr("achrafazizimadrid", 6, 100));
+    
+}

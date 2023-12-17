@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 18:18:28 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:22:51 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/07 21:06:33 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/10 00:36:15 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t ft_strlen(const char *s)
+#include <string.h>
+#include <stdio.h>
+void *ft_memset(void *b, int c, size_t len)
 {
     size_t  i;
-
     i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-// int main ()
-// {
+    unsigned char *str = (unsigned char *)b;
     
-//     printf("%zu", ft_strlen("hraf"));
+    while (i < len)
+    {
+        str[i] = (unsigned char)c;
+        i++;
+    }
+    return (b);
+}
+
+// int main()
+// {
+//     char b[] = "achraf";
+//     int c = 100;
+//     size_t r = 3;
+//     printf("%s", ft_memset(b, c, r));
 // }
