@@ -1,53 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 16:54:33 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:04 by acazizi          ###   ########.fr       */
+/*   Created: 2023/12/21 19:35:08 by acazizi           #+#    #+#             */
+/*   Updated: 2023/12/21 21:11:04 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+char ft_test(unsigned int i, char c)
 {
-    int i;
-    i = 0;
+    return c + 1;
+}
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char)) 
+{
+    size_t len;
+    char *ptr;
+    unsigned int i;
+    char c;
     
+    len = ft_strlen(s);   
+    ptr = malloc(len + 1); 
+    if (ptr == NULL)
+        return NULL;
+    i = 0;
     while (s[i] != '\0')
     {
-        write(fd, &s[i], 1);
+        c = f(i, s[i]);
+        ptr[i] = c; 
         i++;
     }
-    write(fd, "\n", 1);  
+    ptr[i] = '\0';
+    return (ptr);
 }
 
 int main ()
 {
-    char *s;
-    s = "achraf azizi real madrid";
-    ft_putendl_fd(s, 1);
-    // write(1, s, 1);  
-} 
+    char *r;
+    r = "aaaaaa";
+    // ft_strmapi(r);
+    printf("%s\n", ft_strmapi(r, &ft_test));
+    
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-// int main() 
-// {
-// char *s;
-// s = "achrafaziziamdrid";
-// ft_putendl_fd(s, 1);
-// }

@@ -6,12 +6,12 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:08:01 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 17:05:37 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:10:37 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
+
 // char *ft_strchr(const char *s, int c)
 // {
 // 	while (*s)

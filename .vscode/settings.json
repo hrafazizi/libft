@@ -42,6 +42,7 @@
 		"utility": "c",
 		"vector": "c",
 		"stdlib.h": "c",
-		"ft_substr.C": "cpp"
+		"ft_substr.C": "cpp",
+		"stdio.h": "c"
 	}
 }

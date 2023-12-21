@@ -6,11 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 20:11:39 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/07 22:23:54 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:09:10 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

@@ -6,12 +6,12 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 21:06:33 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/10 00:36:15 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:09:54 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
+
 void *ft_memset(void *b, int c, size_t len)
 {
     size_t  i;

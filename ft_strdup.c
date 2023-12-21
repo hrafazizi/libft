@@ -6,23 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 23:13:42 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/16 00:52:35 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:10:43 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-size_t ft_strlen(const char *s)
-{
-    size_t  i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-
+#include "libft.h"
 
 char *ft_strdup(const char *s1)
 {

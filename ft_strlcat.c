@@ -6,23 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:41:32 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:23:07 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:10:55 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
-
-size_t ft_strlen(const char *s)
-{
-    size_t  i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
+#include "libft.h"
 
 // dstsize: cha7l f ram
 //dst hiya dak chi li3mr f ram

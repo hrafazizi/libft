@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.C                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 21:13:30 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/17 01:35:09 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:11:25 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-size_t ft_strlen(const char *s)
-{
-    size_t  i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-
+#include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *r;
     int i ;
     size_t l;
+    char *r;  
     
     i = 0;
-    l = ft_strlen(s);
+    if(s == NULL) // !s   ===   s == null
+        return(NULL);
+        
+    l = ft_strlen(s); 
     if (l - start < len)
-    {
         len = l - start;
-    }
-   
     r = (char *)malloc(len + 1);
     if (r == NULL)
         return NULL;
@@ -52,7 +40,9 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 int main ()
 {
-    
-    printf("%s\n", ft_substr("achrafazizimadrid", 6, 100));
-    
+   char *a;
+   a = "achraf youssef";
+   char *t;
+   t = ft_substr(a, 8, 50);
+   printf("%s", t);
 }

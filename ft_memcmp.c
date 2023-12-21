@@ -6,12 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 22:49:17 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/12 00:53:50 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:09:41 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {

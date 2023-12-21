@@ -6,13 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 16:45:09 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/14 23:28:51 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:11:12 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strstr(const char *haystack, const char *needle)
 {

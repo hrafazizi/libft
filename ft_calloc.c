@@ -6,12 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 01:59:45 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/15 19:29:30 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:09:15 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_calloc(size_t count, size_t size)
 {

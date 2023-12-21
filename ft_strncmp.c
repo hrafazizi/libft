@@ -6,12 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 19:59:54 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/08 23:38:50 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:11:09 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {

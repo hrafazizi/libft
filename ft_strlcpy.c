@@ -6,22 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 21:47:05 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/11 16:25:29 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:10:58 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
- #include <stdio.h>
-
-
-size_t ft_strlen(const char *s)
-{
-    size_t  i;
-    i = 0;
-    while (s[i] != '\0')
-            i++;
-    return(i);
-}
+ #include "libft.h"
  
  size_t ft_strlcpy(char * dst, const char * src, size_t dstsize)
  {

@@ -6,12 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 01:01:52 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/07 21:03:49 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:09:05 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
@@ -29,6 +28,7 @@ int	ft_isdigit(int c)
     i = 0 ;
     s = 0;
     one = 1;
+    
     if (str[0] == '-' || str[0] == '+')
     {
         if (str[0] == '-')

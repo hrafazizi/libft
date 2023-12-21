@@ -6,24 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 00:53:14 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/16 16:04:05 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/21 21:10:52 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-size_t ft_strlen(const char *s)
-{
-    size_t  i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
-
-
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
