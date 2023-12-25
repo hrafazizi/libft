@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 23:13:42 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:43 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:45:22 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char *ft_strdup(const char *s1)
   return(p);
 }
 
-int main ()
-{
-    char *r;
-    r = ft_strdup("achraf real madrid");
-    printf("%s\n", r);
-}
+// int main ()
+// {
+//     char *r;
+//     r = ft_strdup("achraf real madrid");
+//     printf("%s\n", r);
+// }

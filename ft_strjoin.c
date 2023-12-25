@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 00:53:14 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:52 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:45:35 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ char *ft_strjoin(char const *s1, char const *s2)
 }
 
 
-int main()
-{
-    char *r1 = "achraf";
-    char *r2 = "azizi";
-    char *b;
-    b = ft_strjoin(r2, r1);
-    printf("%s\n", b);
-}
+// int main()
+// {
+//     char *r1 = "achraf";
+//     char *r2 = "azizi";
+//     char *b;
+//     b = ft_strjoin(r2, r1);
+//     printf("%s\n", b);
+// }

@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:40:16 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:09:37 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/25 20:22:20 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    int i ;
+    size_t i ;
     i = 0 ;
     char *r = (char *)s;
     
     while(i < n)
     {
-        if (r[i] == c)
+        if (r[i] == (char)c)
         {
             return (&r[i]);
         }

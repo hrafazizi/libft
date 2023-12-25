@@ -6,55 +6,29 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:47:11 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:09:31 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/25 21:14:52 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
-{
-    size_t  i;
-
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return(i);
-}
 
 
-char *ft_strdup(const char *s1)
-{
-  char *p;
-  int i ;
-  i = 0;
-  p = malloc(ft_strlen(s1) + 1);
-  if ( p == NULL)
-    return(NULL);
-  while (s1[i] != '\0')
-  {
-    p[i] = s1[i] ;
-    i++;
-  }
-  p[i] = '\0';
-  return(p);
-}
-
-int ft_intlen(int a) // a = 258
+static int ft_intlen(int a)
 {
     int i ;
     i = 0 ;
     if (a == 0)
         return(1);
-    while(a != 0) // 258 != 0
+    while(a != 0)
     {
-        a = a /10;   // a = 258 /10  = 25/10 = 2 / 2/10 = 0
-        i++ ;   // i =  1 2 3 
+        a = a / 10;  
+        i++ ;   
     }
     return(i); // i = 0
 }
 
-char *ft_itoa(int n) // n = -258;
+char *ft_itoa(int n)
 {
     char *a;
     int len;
@@ -67,13 +41,13 @@ char *ft_itoa(int n) // n = -258;
     
     ckeck_negative = 0;
     
-    if (n < 0)  // n = -258
+    if (n < 0)
     {
-        n = n * -1; // n = -258 * (-1) = 258
-        ckeck_negative = 1; // db check_neg fih 1
+        n = n * -1;
+        ckeck_negative = 1;
     }
     
-    len = ft_intlen(n) + ckeck_negative;  // len = 3 + 1 // len = 4  1lizadna ta3 /0
+    len = ft_intlen(n) + ckeck_negative;
     a = malloc(len + 1);  // malloc(4 +1) = malloc(5) 
     if ( a == NULL ) // FAILURE
         return(NULL);
@@ -91,15 +65,15 @@ char *ft_itoa(int n) // n = -258;
     return a;
 }
 
-int main()
-{
-    int a;
+// int main()
+// {
+//     int a;
 
-    a = -2147483648;
-    char *str;
+//     a = -2147483648;
+//     char *str;
     
-    str = ft_itoa(a);
+//     str = ft_itoa(a);
 
-    printf("%s\n", str);
-    return 0;
-}
+//     printf("%s\n", str);
+//     return 0;
+// }

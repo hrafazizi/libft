@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 22:08:01 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:37 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/25 20:24:30 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,21 +60,40 @@ char *ft_strchr(const char *s, int c)
 {
   int i = 0;
 
+  if (s == NULL)
+    return NULL;
+
   while (s[i] != '\0')
   {
-    if (s[i] == c)
+    if (s[i] == (char)c)
       return ((char *)&s[i]);
     i++;
   }
+  if (!c)
+     return ((char *)&s[i]);
   return (NULL);
 }
 
-int main(void)
-{
-  char *r = "mari";
-  char c = 'a';
+// char	*ft_strchr(const char *s, int c)
+// {
+// 	char	*chr;
 
-  char *ptr = ft_strchr(r, c);
+// 	chr = (char *)s;
+// 	while (*chr != c)
+// 	{
+// 		if (!*chr)
+// 			return (NULL);
+// 		chr++;
+// 	}
+// 	return (chr);
+// }
 
-  printf("%s\n", ptr);
-}
+// int main(void)
+// {
+//   char *r = "mari";
+//   char c = 'a';
+
+//   char *ptr = ft_strchr(r, c);
+
+//   printf("%s\n", ptr);
+// }

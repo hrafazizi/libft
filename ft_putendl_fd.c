@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 16:54:33 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:04 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:42:31 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ void ft_putendl_fd(char *s, int fd)
     write(fd, "\n", 1);  
 }
 
-int main ()
-{
-    char *s;
-    s = "achraf azizi real madrid";
-    ft_putendl_fd(s, 1);
-    // write(1, s, 1);  
-} 
+// int main ()
+// {
+//     char *s;
+//     s = "achraf azizi real madrid";
+//     ft_putendl_fd(s, 1);
+//     // write(1, s, 1);  
+// } 
 
 
 

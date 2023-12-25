@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 01:29:48 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:09:45 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:42:21 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ void *ft_memcpy(void * dst, const void * src, size_t n)
     }
     return(dst);
 }
-int main()
-{
-char dst[] = "hraf";
-char scr[] = "real";
-size_t nbr = 4;
-char *r;
-r = ft_memcpy(dst, scr, 4);
-printf("%s", r);
-}
+// int main()
+// {
+// char dst[] = "hraf";
+// char scr[] = "real";
+// size_t nbr = 4;
+// char *r;
+// r = ft_memcpy(dst, scr, 4);
+// printf("%s", r);
+// }

@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 01:01:52 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:09:05 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:41:37 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,15 @@ int	ft_isdigit(int c)
    return(s * one);
 }
 
-int main ()
-{
-    int a;
-    int b;
+// int main ()
+// {
+//     int a;
+//     int b;
     
-    a = ft_atoi(NULL);
-    // b = atoi(NULL);
+//     a = ft_atoi(NULL);
+//     // b = atoi(NULL);
 
-    printf("%d\n", a);
-    // printf("%d\n", b);
+//     printf("%d\n", a);
+//     // printf("%d\n", b);
 
-}
+// }

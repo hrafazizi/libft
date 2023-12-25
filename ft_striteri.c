@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 20:25:26 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:48 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:45:27 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *))
     }
 }
 
-int main()
-{
-    ft_striteri("achrafmadrid", &ft_hraf);
-}
+// int main()
+// {
+//     ft_striteri("achrafmadrid", &ft_hraf);
+// }

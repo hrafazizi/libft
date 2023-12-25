@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 16:58:39 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:21 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:45:10 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void ft_putstr_fd(char *s, int fd)
         i++;
     }
 }
-int main() 
-{
-    char *r;
-    r = "achraf azizi real madrid";
-    ft_putstr_fd(r, 1);
-}
+// int main() 
+// {
+//     char *r;
+//     r = "achraf azizi real madrid";
+//     ft_putstr_fd(r, 1);
+// }

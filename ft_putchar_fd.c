@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 17:05:23 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:10:01 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 22:41:19 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void ft_putchar_fd(char c, int fd)
     write(fd, &c, 1);
 }
 
-int main ()
-{
-   char r;
-   r = 'a';
-   ft_putchar_fd(r, 1);
-}
+// int main ()
+// {
+//    char r;
+//    r = 'a';
+//    ft_putchar_fd(r, 1);
+// }

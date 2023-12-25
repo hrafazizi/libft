@@ -6,16 +6,16 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 19:35:08 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:11:04 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/23 23:32:40 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_test(unsigned int i, char c)
-{
-    return c + 1;
-}
+// char ft_test(unsigned int i, char c)
+// {
+//     return c + 1;
+// }
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char)) 
 {
@@ -39,14 +39,14 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     return (ptr);
 }
 
-int main ()
-{
-    char *r;
-    r = "aaaaaa";
-    // ft_strmapi(r);
-    printf("%s\n", ft_strmapi(r, &ft_test));
+// int main ()
+// {
+//     char *r;
+//     r = "aaaaaa";
+//     // ft_strmapi(r);
+//     printf("%s\n", ft_strmapi(r, &ft_test));
     
-}
+// }
 
 
 
