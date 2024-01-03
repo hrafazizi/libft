@@ -6,29 +6,25 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 20:25:26 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/23 22:45:27 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 17:08:14 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_hraf(unsigned int a, char *b)
+void	ft_hraf(unsigned int a, char *b)
 {
-    printf("%u %c\n", a, *b);
+	printf("%u %c\n", a, *b);
 }
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    int i;
-    i = 0;
-    while (s[i] != '\0')
-    {
-        f(i, &s[i]);
-        i++;
-    }
-}
+	int	i;
 
-// int main()
-// {
-//     ft_striteri("achrafmadrid", &ft_hraf);
-// }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}

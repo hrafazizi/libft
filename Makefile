@@ -1,8 +1,6 @@
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
-INC = libft.h
-CRT := ar -crs
-REMOVE := rm -rf
+REMOVE = rm -rf
 
 SRCS = ft_atoi.c \
 	  ft_bzero.c \
@@ -42,7 +40,7 @@ SRCS = ft_atoi.c \
 
 
 
-OBJS := $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 
 
@@ -50,10 +48,10 @@ all: $(NAME)
 
 
 
-$(NAME): $(OBJS) $(INC)
-	$(CRT) $@ $^
-%.o: %.c
-	cc $(FLAGS) -c $< -o $@
+$(NAME): $(OBJS) libft.h
+	ar -rs $(NAME) $^
+%.o: %.c  
+	cc $(FLAGS) -c $< -o $@ 
 
 
 clean:

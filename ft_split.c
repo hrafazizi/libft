@@ -6,178 +6,103 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 21:22:41 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/25 20:45:01 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 17:16:58 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
-
-// s = "achrafazizi"
-// char c = 'z'
-
-char *ft_create_str(char c)
+static char	*ft_create_str(char c)
 {
-    char *tmp_str;
+	char	*tmp_str;
 
-    tmp_str = malloc(2);
-    if (tmp_str == NULL)
-        return NULL;
-    tmp_str[0] = c;
-    tmp_str[1] = '\0';
-
-    return tmp_str;
+	tmp_str = malloc(2);
+	if (tmp_str == NULL)
+		return (NULL);
+	tmp_str[0] = c;
+	tmp_str[1] = '\0';
+	return (tmp_str);
 }
 
-int ft_countstr(const char *s, char c)
+static int	ft_countstr(const char *s, char c)
 {
-    int numbre_of_words;
-    int i;
+	int	numbre_of_words;
+	int	i;
 
-    numbre_of_words = 0;
-    i = 0;
-    if (s == NULL || s[0] == '\0')
-        return (0);
-    while (s[i] != '\0')
-    {
-        if (s[i] == c && s[i - 1] != c)
-            numbre_of_words++;
-        i++;
-    }
-    return (numbre_of_words + 1);
+	numbre_of_words = 0;
+	i = 0;
+	if (s == NULL || s[0] == '\0')
+		return (0);
+	while (s[i] != '\0')
+	{
+		if (s[i] == c && s[i - 1] != c)
+			numbre_of_words++;
+		i++;
+	}
+	return (numbre_of_words + 1);
 }
 
-int ft_malloc_words(char **ptr, char *s, char c) // ptr = [0, 0, 0 ,0] | s ="abczzdszgggg" | c = 'z'
+static void	ft_assgin(int *lenght_of_word, int *word_start, int i)
 {
-    int numbre_of_words;
-    int i;
-    int lenght_of_word;
-
-    numbre_of_words = 0;
-    lenght_of_word = 0;
-    i = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] == c && s[i - 1] != c)
-        {
-            ptr[numbre_of_words] = ft_calloc(lenght_of_word + 1, 1);
-            if (ptr[numbre_of_words] == NULL)
-                return 0;
-            lenght_of_word = 0;
-            numbre_of_words++;
-        }
-        else if (s[i] != c)
-            lenght_of_word++;
-        i++;
-    }
-    ptr[numbre_of_words] = ft_calloc(lenght_of_word + 1, 1);
-    if (ptr[numbre_of_words] == NULL)
-        return 0;
-    return 1;
+	if (*lenght_of_word == 0)
+		*word_start = i;
+	(*lenght_of_word)++;
 }
 
-void ft_fill_ptr(char **ptr, char *s, char c)
+static int	ft_malloc_words(char **ptr, char *s, char c, size_t s_size)
 {
-    int numbre_of_words;
-    int i;
-    int lenght_of_word;
+	int		numbre_of_words;
+	size_t	i;
+	int		lenght_of_word;
+	int		word_start;
 
-    numbre_of_words = 0;
-    lenght_of_word = 0;
-    i = 0;
-
-    while (s[i] != '\0')
-    {
-        if (s[i] == c && s[i - 1] != c)
-        {
-            lenght_of_word = 0;
-            numbre_of_words++;
-        }
-        else if (s[i] != c)
-        {
-            ptr[numbre_of_words][lenght_of_word] = s[i];
-            lenght_of_word++;
-        }
-        i++;
-    }
+	numbre_of_words = 0;
+	lenght_of_word = 0;
+	word_start = 0;
+	i = -1;
+	if (s_size == 0)
+		return (0);
+	while (++i <= s_size)
+	{
+		if ((s[i] == c && s[i - 1] != c) || (i == s_size))
+		{
+			ptr[numbre_of_words] = ft_substr(s, word_start, i - word_start);
+			if (ptr[numbre_of_words] == NULL)
+				return (numbre_of_words);
+			lenght_of_word = 0;
+			numbre_of_words++;
+		}
+		else if (s[i] != c)
+			ft_assgin(&lenght_of_word, &word_start, i);
+	}
+	return (0);
 }
 
-char **ft_split(char const *s, char c) // s = zzzzzabczzdszggggzzzz | c = 'z'
+char	**ft_split(char const *s, char c)
 {
-    int nbr_of_words;
-    char **ptr;
-    char *tmp_str;
-    char *str;
+	int		nbr_of_words;
+	char	**ptr;
+	char	*tmp_str;
+	char	*str;
+	int		need_to_free;
 
-    tmp_str = ft_create_str(c); // tmp_str = "z\0"
-    if (tmp_str == NULL)
-        return 0;
-    str = ft_strtrim(s, tmp_str);        // s = zzzzzabczzdszggggzzzz| tmp_str = "z" ===> str =  abczzdszgggg
-
-    nbr_of_words = ft_countstr(str, c);
-    ptr = (char **)ft_calloc(nbr_of_words + 1, sizeof(char *)); // ptr = (char **)ft_calloc(3 + 1, 8) = (char **)ft_calloc(4, 8) => ptr = [0, 0, 0, 0]
-    if (ptr == NULL)
-        return NULL;
-    ft_malloc_words(ptr, str, c);
-    ft_fill_ptr(ptr, str, c);
-    free(tmp_str);
-    return ptr;
+	tmp_str = ft_create_str(c);
+	if (tmp_str == NULL)
+		return (0);
+	str = ft_strtrim(s, tmp_str);
+	free(tmp_str);
+	nbr_of_words = ft_countstr(str, c);
+	ptr = (char **)malloc((nbr_of_words + 1) * sizeof(char *));
+	if (ptr == NULL)
+		return (NULL);
+	need_to_free = ft_malloc_words(ptr, str, c, ft_strlen(str));
+	if (need_to_free > 0)
+	{
+		while (need_to_free > 0)
+			free (ptr[--need_to_free]);
+		free (ptr);
+	}
+	else
+		ptr[nbr_of_words] = NULL;
+	return (free(str), ptr);
 }
-
-// need to free all reserved memory if calloc failure it
-// int main()
-// {
-
-//     char *s = "zzzzzzzachrafaziihghjghjghgzzzzzzzz11212z";
-//     char c = 'z';
-   
-//     char **ptr = ft_split(s, c);
-//     int i = 0;
-//     while (ptr[i] != NULL)
-//     {
-//         printf("====> |%s|\n", ptr[i]);
-//         i++;
-//     }
-
-//     return 0;
-// }
-// void	ft_print_result(char const *s)
-// {
-// 	int		len;
-
-// 	len = 0;
-// 	while (s[len])
-// 		len++;
-// 	write(1, s, len);
-// }
-
-// int main(){
-//     char	**tabstr;
-// 	int		i =0;
-
-
-//     if (!(tabstr = ft_split("          ", ' ')))
-//         ft_print_result("NULL");
-//     else
-//     {
-//         while (tabstr[i] != NULL)
-//         {
-//             ft_print_result(tabstr[i]);
-//             write(1, "\n", 1);
-//             i++;
-//         }
-//     }
-    
-    // if (!(tabstr = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ')))
-	// 		ft_print_result("NULL");
-	// 	else
-	// 	{
-	// 		while (tabstr[i] != NULL)
-	// 		{
-	// 			ft_print_result(tabstr[i]);
-	// 			write(1, "\n", 1);
-	// 			i++;
-	// 		}
-	// 	}
-// }

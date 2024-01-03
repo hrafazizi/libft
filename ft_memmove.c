@@ -6,51 +6,29 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 21:12:34 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/23 22:41:26 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 17:01:53 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void * dst, const void * src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    size_t i;
-    i = 0;
-    unsigned char *d;
-    unsigned char *s;
+	char	*s;
+	char	*d;
 
-    d = (unsigned char *)dst;
-    s = (unsigned char *)src;
-    while ( i < n)
-    {
-        d[i] = s[i];
-        i++;
-    }
-    return(dst);
+	s = (char *) src;
+	d = (char *) dst;
+	if (d == NULL && s == NULL)
+		return (NULL);
+	if (s > d)
+	{
+		return (ft_memcpy(dst, src, len));
+	}
+	while (len > 0)
+	{
+		d[len - 1] = s[len - 1];
+		len--;
+	}
+	return (dst);
 }
-void *ft_memmove(void *dst, const void *src, size_t len)
-{
-    char *d= (char *) dst;
-    char *s = (char *) src;
-
-    if(s > d)
-    {
-        return(ft_memcpy(dst, src, len));
-    }
-
-    while(len > 0)
-    {
-        d[len - 1] = s[len - 1];
-        len--;
-    }
-    return(dst);
-}
-
-// int main()
-// {
-// char dst[]= "turttraokkkfma";
-// char src[]= "001000";
-// size_t n = 9;
-// char *r = ft_memmove(dst, src, n);
-// printf("%s\n", r);
-// }

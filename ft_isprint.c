@@ -6,21 +6,15 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 20:22:33 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/02 22:36:06 by acazizi          ###   ########.fr       */
+/*   Updated: 2023/12/29 00:11:43 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- int ft_isprint(int c)
- {
-	if(c >= 32 && c<= 126)
-	return(1);
-	
- return (0);
- }
- 
-// int main()
-// {
-// 	printf("%d", ft_isprint(12));
-// }
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
+}

@@ -6,44 +6,17 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 16:54:33 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/23 22:42:31 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 17:02:15 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    int i;
-    i = 0;
-    
-    while (s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
-    write(fd, "\n", 1);  
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-
-// int main ()
-// {
-//     char *s;
-//     s = "achraf azizi real madrid";
-//     ft_putendl_fd(s, 1);
-//     // write(1, s, 1);  
-// } 
-
-
-
-
-
-
-
-
-
-
-
-
 
 // int main() 
 // {

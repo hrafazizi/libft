@@ -43,6 +43,7 @@
 		"vector": "c",
 		"stdlib.h": "c",
 		"ft_substr.C": "cpp",
-		"stdio.h": "c"
+		"stdio.h": "c",
+		"test": "c"
 	}
 }

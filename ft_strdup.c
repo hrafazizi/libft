@@ -6,30 +6,16 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 23:13:42 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/23 22:45:22 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 17:08:06 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)// s1 = ""
 {
-  char *p;
-  int i ;
-  i = 0;
-  p = malloc(ft_strlen(s1) + 1);
-  while (s1[i] != '\0')
-  {
-    p[i] = s1[i] ;
-    i++;
-  }
-  p[i] = '\0';
-  return(p);
-}
+	size_t	len;
 
-// int main ()
-// {
-//     char *r;
-//     r = ft_strdup("achraf real madrid");
-//     printf("%s\n", r);
-// }
+	len = ft_strlen(s1);
+	return (ft_substr(s1, 0, len));
+}

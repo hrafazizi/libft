@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 21:07:38 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/21 21:08:46 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 17:12:02 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if(c >= 'a' && c <='z')
-		return(c - 32);
-	return(c);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
-

@@ -6,34 +6,27 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 01:29:48 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/23 22:42:21 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 17:01:27 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void * dst, const void * src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    size_t i;
-    i = 0;
-    unsigned char *d;
-    unsigned char *s;
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-    d = (unsigned char *)dst;
-    s = (unsigned char *)src;
-    while ( i < n)
-    {
-        d[i] = s[i];
-        i++;
-    }
-    return(dst);
+	i = 0;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (d == NULL && s == NULL)
+		return (NULL);
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dst);
 }
-// int main()
-// {
-// char dst[] = "hraf";
-// char scr[] = "real";
-// size_t nbr = 4;
-// char *r;
-// r = ft_memcpy(dst, scr, 4);
-// printf("%s", r);
-// }
