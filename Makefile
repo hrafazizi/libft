@@ -1,6 +1,7 @@
+
+
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
-REMOVE = rm -rf
 
 SRCS = ft_atoi.c \
 	  ft_bzero.c \
@@ -55,9 +56,9 @@ $(NAME): $(OBJS) libft.h
 
 
 clean:
-	$(REMOVE) $(OBJS) $(OBJSB)
+	rm -rf $(OBJS)
 
 fclean: clean
-	$(REMOVE) $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all

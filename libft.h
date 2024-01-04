@@ -6,15 +6,13 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:51:16 by acazizi           #+#    #+#             */
-/*   Updated: 2024/01/04 02:16:31 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/04 20:34:29 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
 

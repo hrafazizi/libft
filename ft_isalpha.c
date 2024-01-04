@@ -6,12 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:32:08 by acazizi           #+#    #+#             */
-/*   Updated: 2023/12/29 00:11:35 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/04 19:35:59 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
