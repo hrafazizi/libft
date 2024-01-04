@@ -6,15 +6,12 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:41:32 by acazizi           #+#    #+#             */
-/*   Updated: 2024/01/03 17:08:29 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/04 19:11:20 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// dstsize: cha7l f ram
-//dst hiya dak chi li3mr f ram
-// src dak chi libghi i7ot 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;

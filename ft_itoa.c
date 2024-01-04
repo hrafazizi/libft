@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:47:11 by acazizi           #+#    #+#             */
-/*   Updated: 2024/01/03 17:00:04 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/04 19:08:32 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_intlen(int a)
 	return (i);
 }
 
-char	*ft_get_string(int n, int ckeck_negative)
+static char	*ft_get_string(int n, int ckeck_negative)
 {
 	int		len;
 	int		i;

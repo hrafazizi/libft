@@ -6,7 +6,7 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:14:39 by acazizi           #+#    #+#             */
-/*   Updated: 2024/01/03 17:11:25 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/04 01:08:58 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char		*str;
 
 	start = 0;
+	if (!s1 || !set)
+		return (0);
+	if (!*set)
+		return (ft_strdup(s1));
 	while (s1[start] != '\0' && ft_strchr(set, s1[start]) != NULL)
 	{
 		start++;

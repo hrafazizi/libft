@@ -24,27 +24,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
-
-// int main ()
-// {
-//     size_t count = 4;
-//     size_t size  = sizeof(char);
-//     char *r;
-//     r = ft_calloc(count, size);
-
-//     int i;
-//     i = 0;
-//     char *s = "ach";
-//     while (s[i])
-//     {
-//        r[i] = s[i];
-//        i++;
-//     }
-//     i = 0;
-//      while(r[i])
-//     {
-//         printf("%c\n", r[i]);
-//         i++;
-//     }
-//     return(0);
-// }

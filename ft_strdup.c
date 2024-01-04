@@ -6,13 +6,13 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 23:13:42 by acazizi           #+#    #+#             */
-/*   Updated: 2024/01/03 17:08:06 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/03 20:25:58 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)// s1 = ""
+char	*ft_strdup(const char *s1)
 {
 	size_t	len;
 

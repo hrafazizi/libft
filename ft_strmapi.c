@@ -6,16 +6,11 @@
 /*   By: acazizi <acazizi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 19:35:08 by acazizi           #+#    #+#             */
-/*   Updated: 2024/01/03 17:09:03 by acazizi          ###   ########.fr       */
+/*   Updated: 2024/01/04 19:11:30 by acazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// char ft_test(unsigned int i, char c)
-// {
-//     return c + 1;
-// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
